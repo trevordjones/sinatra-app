@@ -1,0 +1,7 @@
+- errors = Array(target).map(&:errors).flat_map(&:full_messages)
+- if errors.any?
+  .alert.alert-error
+    h3= "Please correct the following #{'error'.pluralize(errors)}:"
+    ul
+      - errors.each do |msg|
+        li= msg
