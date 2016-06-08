@@ -3,6 +3,7 @@ module Framework
 
     before do
       @session = env["rack.session"]
+      @title = "Framework for Sinatra"
     end
 
     get "/" do

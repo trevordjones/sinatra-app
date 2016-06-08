@@ -1,5 +1,7 @@
 require 'sinatra/base'
 require 'mustermann'
+require 'sequel'
+require 'dotenv'
 
 module Framework
   class Base < Sinatra::Base
@@ -26,7 +28,8 @@ module Framework
 
     configure :development do
       register Sinatra::Reloader
-
+      Dotenv.load
+      Sequel.connect(ENV['DATABASE'])
       enable :logging
       set :show_exceptions, :after_handler
       enable :dump_errors
@@ -35,5 +38,6 @@ module Framework
     configure :production do
       enable :protection
     end
+
   end
 end

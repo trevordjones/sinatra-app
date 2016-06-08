@@ -10,6 +10,7 @@ gem 'rack-flash3', require: "rack/flash"
 gem 'rack-protection'
 gem 'slim', '~> 3.0'
 gem 'sequel'
+gem 'pg'
 gem 'rack-ssl'
 gem "rack_csrf",       require: "rack/csrf"
 gem 'http'
