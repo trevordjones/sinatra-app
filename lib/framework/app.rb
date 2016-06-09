@@ -1,5 +1,9 @@
 require 'framework/config'
 require 'framework/app/base'
+require 'rack/csrf'
+require 'rack/flash'
+require 'sinatra/router'
+require 'sprockets'
 
 require 'framework/app/endpoints/default'
 

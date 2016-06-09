@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'mustermann'
 require 'sequel'
 require 'dotenv'
+require 'json'
 
 module Framework
   class Base < Sinatra::Base
